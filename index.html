@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+  <body>
+
+
+    <div id="app">
+
+      <nav>
+        <input type="text" v-model='userSearch'@keyup.enter="search()" >
+      </nav>
+
+      <div  v-for="restaurant in results" v-if="results.length > 0">
+        {{restaurant.title}}
+      </div>
+
+
+    </div>
+
+
+
+    <script src="js/script.js" charset="utf-8"></script>
+  </body>
+</html>
